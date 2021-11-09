@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    The plugin is used to run a playbook on Alertflex Cnode to get Scanners alerts statistics.
+</div>

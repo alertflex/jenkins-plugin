@@ -1,0 +1,30 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:st="jelly:stapler">
+    <l:layout title="Alertflex report">
+        <l:side-panel>
+            <st:include page="sidepanel.jelly" it="${it.run}" optional="true" />
+        </l:side-panel>
+        <l:main-panel>
+
+            <h2>
+                Report type: ${it.reportType}
+            </h2>
+
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <th>Severity</th>
+                    <th>Num</th>
+                </tr>
+                <j:forEach var="a" items="${it.alertsList}">
+                    <tr>
+                        <td>${a.source}</td>
+                        <td>${a.severity}</td>
+                        <td>${a.num}</td>
+                    </tr>
+                </j:forEach>
+            </table>
+
+        </l:main-panel>
+    </l:layout>
+</j:jelly>
